@@ -306,12 +306,12 @@ def compute_open_surveys(block, open_surveys, chain_code):
             questionid = transaction['content']['questionid']
             if questionid not in open_surveys:
                 open_surveys[questionid] = transaction['content']
-                return True
+                continue
         elif transaction['type'].lower() == 'close':
             questionid = transaction['content']['questionid']
             if questionid in open_surveys and open_surveys[questionid]['author'] == transaction['content']['author'] and open_surveys[questionid]['status'] == 'opening':
                 open_surveys[questionid]['status'] = 'closed'
-                return True
+                continue
         elif transaction['type'].lower() == 'vote':
             questionid = transaction['content']['questionid']
             if questionid in open_surveys and open_surveys[questionid]['status'] == 'opening':
@@ -329,19 +329,19 @@ def compute_open_surveys(block, open_surveys, chain_code):
                 if vote in answers:
                     if author not in answers[vote]:
                         answers[vote].append(author)
-                        return True
+                        continue
                 else:
                     print(f"Lỗi: Phương án '{vote}' không tồn tại trong danh sách {list(answers.keys())}")
                     return False
         elif transaction['type'].lower() == 'smartcontract':
             try:
                 exec(transaction['content']['code'],chain_code)
-                return True
+                continue
             except:
                 print('Error when create new contract')
                 return False
         else:
-            return True
+            continue
         return False
     return True
 

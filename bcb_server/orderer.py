@@ -49,7 +49,8 @@ def announce_new_block():
 
     for peer in peers:
         try:
-            if peer.find(request_addr) != -1:
+            data = request.get_json() or {}
+            if peer == request_addr + ':' + str(data.get('port', '')):
                 continue
             url = "http://{}/add_block".format(peer)
             requests.post(url, json=block.__dict__)
@@ -79,7 +80,8 @@ def announce_new_transaction():
 
     for peer in peers:
         try:
-            if peer.find(request_addr) != -1:
+            data = request.get_json() or {}
+            if peer == request_addr + ':' + str(data.get('port', '')):
                 continue
             url = "http://{}/get_transaction".format(peer)
             requests.post(url, json=data)

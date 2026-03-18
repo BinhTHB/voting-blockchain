@@ -17,7 +17,7 @@ peers = set()
 groups = {}
 # list permission for each group
 # O : Open | C : Close | V : Vote
-permission = { 'admin' : 'OCVSE', 'peer' : 'OCVSE', 'guest' : 'V' }
+permission = { 'admin' : 'OCVSE', 'peer' : 'OCVSE', 'guest' : 'OCVSE' }
 
 groups[get_ip() + ':5000'] = 'admin'
 

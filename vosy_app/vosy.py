@@ -14,6 +14,7 @@ __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file
 
 app = Flask(__name__)
 app.secret_key = 'super_secret_voting_key'
+port = 8080
 
 @app.context_processor
 def my_utility_processor():
@@ -149,7 +150,7 @@ def submit_textarea():
             'answers': answers,
             'opening_time': opening_time,
             'status': 'opening',
-            'author': author + ':5000',
+            'author': author + ':' + str(port),
             'timestamp': time.time()
         }
     }
@@ -167,7 +168,7 @@ def submit_textarea():
         'content': {
             'contract': 'count_down_opening_time',
             'arguments': [opening_time, author, questionid, CONNECTED_NODE_ADDRESS],
-            'author': author + ':5000'
+            'author': author + ':' + str(port)
         }
     }
 
@@ -191,7 +192,7 @@ def close_survey():
         'type' : 'close',
         'content' : {
             'questionid': questionid,
-            'author': author + ':5000',
+            'author': author + ':' + str(port),
             'timestamp': time.time()
         }
     }
@@ -220,7 +221,7 @@ def vote():
         'type' : 'vote',
         'content' : {
             'questionid': questionid,
-            'author': author + ':5000',
+            'author': author + ':' + str(port),
             'vote': answer,
             'timestamp': time.time()
         }
@@ -250,7 +251,7 @@ def update_chaincode():
         'type' : 'smartcontract',
         'content' : {
             'code': code,
-            'author': author + ':5000',
+            'author': author + ':' + str(port),
             'timestamp': time.time()
         }
     }
@@ -280,7 +281,10 @@ if __name__ == '__main__':
     args = parser.parse_args()
     port = args.port
 
-    CONNECTED_NODE_ADDRESS = 'http://{}:5000'.format(args.host)
+    if ':' in args.host:
+        CONNECTED_NODE_ADDRESS = 'http://{}'.format(args.host)
+    else:
+        CONNECTED_NODE_ADDRESS = 'http://{}:5000'.format(args.host)
 
     print('My ip address : ' + get_ip())
 

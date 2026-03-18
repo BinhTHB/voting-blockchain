@@ -106,33 +106,25 @@ Vosy need to know aleast 1 peer so you need to pass peer ip address to vosy app 
 python vosy_app/vosy.py
 ```
 
-##### for example, with window users, ip address `0.0.0.0` is not available, so you need to run in `127.0.0.1` instead, so you have to follow this command in 4 cmd:
+## Cụm 1: Giả lập "Máy 1" (Node chính & Hạ tầng)
 
-```
-python bcb_server/orderer.py
-```
-```
-python bcb_server/certificate_authority.py --orderer 127.0.0.1
-```
-```
-python bcb_server/peer.py --orderer 127.0.0.1 --ca 127.0.0.1
-```
-```
-python vosy_app/vosy.py --host 127.0.0.1
-```
+Mở 4 tab Terminal và chạy lần lượt:
 
-###### In second machine
-You just need to run `peer.py` and `vosy.py` but you need to provide Lan IP address `orderer.py` and `certificate_authority.py` run in machine 1. In my case, it is `192.168.43.162`
+1. **Terminal 1 (Orderer):** `python bcb_server/orderer.py`
+2. **Terminal 2 (CA):** `python bcb_server/certificate_authority.py --orderer 127.0.0.1`
+3. **Terminal 3 (Peer 1):** `python bcb_server/peer.py --orderer 127.0.0.1 --ca 127.0.0.1` *(Node này sẽ chạy mặc định ở cổng 5000)*
+4. **Terminal 4 (Giao diện 1):** `python vosy_app/vosy.py --host 127.0.0.1` *(Giao diện này chạy ở cổng 8080, kết nối tới Peer 5000)*
 
-```
-python bcb_server/peer.py --orderer 192.168.43.162 --ca 192.168.43.162
-```
+---
 
-```
-python vosy_app/vosy.py
-```
+## Cụm 2: Giả lập "Máy 2" (Node phụ)
 
-this vosy will auto connect to local peer in address `0.0.0.0:5000`
+Mở thêm 2 tab Terminal mới (đây là nơi bạn giả lập máy khác):
+
+1. **Terminal 5 (Peer 2):** `python bcb_server/peer.py -p 4000 --orderer 127.0.0.1 --ca 127.0.0.1`
+    - **Giải thích:** Bạn dùng cổng `-p 4000` để không bị trùng với Peer 1. Chúng ta vẫn dùng IP `127.0.0.1` vì thực tế nó vẫn đang chạy trên cùng máy bạn.
+2. **Terminal 6 (Giao diện 2):** `python vosy_app/vosy.py -p 8081 --host 127.0.0.1:4000`
+    - **Giải thích:** `-p 8081` để tránh trùng với Giao diện 1 (8080). `--host 127.0.0.1:4000` để ra lệnh cho giao diện này **chỉ kết nối** tới Peer 2.
 
 ## Tutorial
 

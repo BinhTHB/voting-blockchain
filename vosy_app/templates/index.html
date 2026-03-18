@@ -3,13 +3,19 @@
 {% block content %}
 <ul class="nav nav-pills nav-fill mb-4 shadow-sm bg-white rounded" id="myTab" role="tablist" style="padding: 10px;">
     <li class="nav-item" role="presentation">
-        <button class="nav-link active fw-bold" id="voter-tab" data-bs-toggle="tab" data-bs-target="#voter" type="button" role="tab" aria-controls="voter" aria-selected="true"><i class="fas fa-users"></i> Phân hệ Cử tri</button>
+        <button class="nav-link active fw-bold" id="voter-tab" data-bs-toggle="tab" data-bs-target="#voter"
+            type="button" role="tab" aria-controls="voter" aria-selected="true"><i class="fas fa-users"></i> Phân hệ Cử
+            tri</button>
     </li>
     <li class="nav-item" role="presentation">
-        <button class="nav-link fw-bold" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button" role="tab" aria-controls="admin" aria-selected="false"><i class="fas fa-user-shield"></i> Phân hệ Quản trị (Admin/Miner)</button>
+        <button class="nav-link fw-bold" id="admin-tab" data-bs-toggle="tab" data-bs-target="#admin" type="button"
+            role="tab" aria-controls="admin" aria-selected="false"><i class="fas fa-user-shield"></i> Phân hệ Quản trị
+            (Admin/Miner)</button>
     </li>
     <li class="nav-item" role="presentation">
-        <button class="nav-link fw-bold" id="explorer-tab" data-bs-toggle="tab" data-bs-target="#explorer" type="button" role="tab" aria-controls="explorer" aria-selected="false"><i class="fas fa-cubes"></i> Blockchain Explorer</button>
+        <button class="nav-link fw-bold" id="explorer-tab" data-bs-toggle="tab" data-bs-target="#explorer" type="button"
+            role="tab" aria-controls="explorer" aria-selected="false"><i class="fas fa-cubes"></i> Blockchain
+            Explorer</button>
     </li>
 </ul>
 
@@ -21,48 +27,62 @@
             {% for post in posts %}
             <div class="col-lg-6 mb-4">
                 <div class="card shadow-sm h-100 border-0">
-                    <div class="card-header bg-white d-flex justify-content-between align-items-center border-bottom-0 pt-3">
+                    <div
+                        class="card-header bg-white d-flex justify-content-between align-items-center border-bottom-0 pt-3">
                         <div class="d-flex align-items-center">
-                            <div class="bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3" style="width: 45px; height: 45px; font-weight: bold;">
+                            <div class="bg-primary text-white rounded-circle d-flex justify-content-center align-items-center me-3"
+                                style="width: 45px; height: 45px; font-weight: bold;">
                                 {{ post.author[:2] | upper }}
                             </div>
                             <div>
                                 <h6 class="mb-0 fw-bold">{{post.author}}</h6>
-                                <div class="text-muted small">ID: {{post.questionid}} &bull; {{readable_time(post.timestamp)}}</div>
+                                <div class="text-muted small">ID: {{post.questionid}} &bull;
+                                    {{readable_time(post.timestamp)}}</div>
                             </div>
                         </div>
-                        <span class="badge bg-success shadow-sm px-3 py-2"><i class="fas fa-check-circle"></i> Confirmed in Block</span>
+                        <span class="badge bg-success shadow-sm px-3 py-2"><i class="fas fa-check-circle"></i> Confirmed
+                            in Block</span>
                     </div>
                     <div class="card-body">
                         <p class="card-text fs-5 mb-4">{{post.question}}</p>
-                        
+
                         <div class="d-flex flex-column gap-2">
-                        {% for answer, votes in post.answers.items() %}
+                            {% for answer, votes in post.answers.items() %}
                             {% if post.status == 'opening' %}
-                                <a href="/vote?id={{post.questionid}}&answer={{answer}}" class="btn btn-outline-primary text-start d-flex justify-content-between align-items-center p-3 rounded-3 transition-hover">
-                                    <span class="fw-semibold">{{answer}}</span>
-                                    <span class="badge bg-primary rounded-pill fs-6"><i class="fas fa-thumbs-up"></i> {{len(votes)}}</span>
-                                </a>
+                            <a href="/vote?id={{post.questionid}}&answer={{answer}}"
+                                class="btn btn-outline-primary text-start d-flex justify-content-between align-items-center p-3 rounded-3 transition-hover">
+                                <span class="fw-semibold">{{answer}}</span>
+                                <span class="badge bg-primary rounded-pill fs-6"><i class="fas fa-thumbs-up"></i>
+                                    {{len(votes)}}</span>
+                            </a>
                             {% else %}
-                                {% if len(votes) == maxvote(post) %}
-                                    <button class="btn btn-success text-start d-flex justify-content-between align-items-center p-3 rounded-3" disabled>
-                                        <span class="fw-bold">{{answer}} <i class="fas fa-crown text-warning ms-1"></i> (Winner)</span>
-                                        <span class="badge bg-light text-success rounded-pill fs-6"><i class="fas fa-trophy"></i> {{len(votes)}}</span>
-                                    </button>
-                                {% else %}
-                                    <button class="btn btn-outline-secondary text-start d-flex justify-content-between align-items-center p-3 rounded-3" disabled>
-                                        <span>{{answer}}</span>
-                                        <span class="badge bg-secondary rounded-pill fs-6"><i class="fas fa-thumbs-up"></i> {{len(votes)}}</span>
-                                    </button>
-                                {% endif %}
+                            {% if len(votes) == maxvote(post) %}
+                            <button
+                                class="btn btn-success text-start d-flex justify-content-between align-items-center p-3 rounded-3"
+                                disabled>
+                                <span class="fw-bold">{{answer}} <i class="fas fa-crown text-warning ms-1"></i>
+                                    (Winner)</span>
+                                <span class="badge bg-light text-success rounded-pill fs-6"><i
+                                        class="fas fa-trophy"></i> {{len(votes)}}</span>
+                            </button>
+                            {% else %}
+                            <button
+                                class="btn btn-outline-secondary text-start d-flex justify-content-between align-items-center p-3 rounded-3"
+                                disabled>
+                                <span>{{answer}}</span>
+                                <span class="badge bg-secondary rounded-pill fs-6"><i class="fas fa-thumbs-up"></i>
+                                    {{len(votes)}}</span>
+                            </button>
                             {% endif %}
-                        {% endfor %}
+                            {% endif %}
+                            {% endfor %}
                         </div>
-                        
+
                     </div>
                     {% if post.status == 'opening' %}
                     <div class="card-footer bg-white border-top-0 text-end pb-3">
-                         <a href="/close_survey?id={{post.questionid}}" class="btn btn-sm btn-outline-danger"><i class="fas fa-times"></i> Đóng cuộc bầu cử</a>
+                        <a href="/close_survey?id={{post.questionid}}" class="btn btn-sm btn-outline-danger"><i
+                                class="fas fa-times"></i> Đóng cuộc bầu cử</a>
                     </div>
                     {% endif %}
                 </div>
@@ -74,10 +94,11 @@
             </div>
             {% endfor %}
         </div>
-        
+
         <!-- Pending Actions Section (Voting/etc) -->
         {% if pending_txs %}
-        <h4 class="mt-5 mb-3 text-warning border-bottom pb-2"><i class="fas fa-clock"></i> Giao dịch đang chờ xử lý (Mempool)</h4>
+        <h4 class="mt-5 mb-3 text-warning border-bottom pb-2"><i class="fas fa-clock"></i> Giao dịch đang chờ xử lý
+            (Mempool)</h4>
         <div class="row">
             {% for tx in pending_txs %}
             <div class="col-lg-6 mb-3">
@@ -88,9 +109,11 @@
                     <div class="card-body py-3">
                         <div class="d-flex justify-content-between mb-2">
                             <span class="badge bg-warning text-dark px-3 py-2 fw-bold">TYPE: {{ tx.type | upper }}</span>
-                            <span class="text-muted small"><i class="fas fa-fingerprint"></i> Tín hiệu chờ đóng khối</span>
+                            <span class="text-muted small"><i class="fas fa-fingerprint"></i> Tín hiệu chờ đóng
+                                khối</span>
                         </div>
-                        <div class="bg-white p-2 rounded border small text-break font-monospace" style="max-height: 100px; overflow-y: auto;">
+                        <div class="bg-white p-2 rounded border small text-break font-monospace"
+                            style="max-height: 100px; overflow-y: auto;">
                             {{ tx.content | tojson | safe }}
                         </div>
                     </div>
@@ -111,14 +134,20 @@
                         <h5 class="mb-0"><i class="fas fa-cogs"></i> Technical Operations</h5>
                     </div>
                     <div class="card-body p-4 bg-light text-center d-flex flex-wrap justify-content-center gap-3">
-                        <a href="/mine" class="btn btn-danger btn-lg px-4 shadow-sm"><i class="fas fa-hammer"></i> Mine Block</a>
-                        <a href="/" class="btn btn-secondary btn-lg px-4 shadow-sm"><i class="fas fa-sync"></i> Resync Node</a>
-                        <a href="/update_chaincode" class="btn btn-info btn-lg px-4 shadow-sm text-white"><i class="fas fa-code"></i> Update Chaincode</a>
-                        <a href="/pending_tx" target="_blank" class="btn btn-warning btn-lg px-4 shadow-sm"><i class="fas fa-list"></i> View Raw Mempool</a>
-                        <a href="/list_nodes" target="_blank" class="btn btn-primary btn-lg px-4 shadow-sm"><i class="fas fa-network-wired"></i> List Network Nodes</a>
+                        <a href="/mine" class="btn btn-danger btn-lg px-4 shadow-sm"><i class="fas fa-hammer"></i> Mine
+                            Block</a>
+                        <a href="/" class="btn btn-secondary btn-lg px-4 shadow-sm"><i class="fas fa-sync"></i> Resync
+                            Node</a>
+                        <a href="/update_chaincode" class="btn btn-info btn-lg px-4 shadow-sm text-white"><i
+                                class="fas fa-code"></i> Update Chaincode</a>
+                        <a href="/pending_tx" target="_blank" class="btn btn-warning btn-lg px-4 shadow-sm"><i
+                                class="fas fa-list"></i> View Raw Mempool</a>
+                        <a href="/list_nodes" target="_blank" class="btn btn-primary btn-lg px-4 shadow-sm"><i
+                                class="fas fa-network-wired"></i> List Network Nodes</a>
                     </div>
                     <div class="card-footer bg-white text-danger fw-bold text-center p-3">
-                        <i class="fas fa-exclamation-triangle"></i> Luôn cập nhật chaincode và đào block trước khi tạo cuộc bầu cử mới!
+                        <i class="fas fa-exclamation-triangle"></i> Luôn cập nhật chaincode và đào block trước khi tạo
+                        cuộc bầu cử mới!
                     </div>
                 </div>
             </div>
@@ -135,24 +164,30 @@
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold text-secondary">Question ID</label>
-                                    <input name="questionid" type="text" placeholder="e.g., 2354" class="form-control form-control-lg bg-light" required>
+                                    <input name="questionid" type="text" placeholder="e.g., 2354"
+                                        class="form-control form-control-lg bg-light" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label class="form-label fw-bold text-secondary">Opening Time (minutes)</label>
-                                    <input name="opening_time" type="number" placeholder="3" class="form-control form-control-lg bg-light" required>
+                                    <input name="opening_time" type="number" placeholder="3"
+                                        class="form-control form-control-lg bg-light" required>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label fw-bold text-secondary">Survey Question</label>
-                                <textarea class="form-control form-control-lg bg-light" rows="3" placeholder="Write your survey question..." name="question" required></textarea>
+                                <textarea class="form-control form-control-lg bg-light" rows="3"
+                                    placeholder="Write your survey question..." name="question" required></textarea>
                             </div>
                             <div class="mb-4">
-                                <label class="form-label fw-bold text-secondary">Answers (separated by '|' symbol)</label>
-                                <input name="answer" type="text" placeholder="Option 1|Option 2|Option 3" class="form-control form-control-lg bg-light" required>
+                                <label class="form-label fw-bold text-secondary">Answers (separated by '|'
+                                    symbol)</label>
+                                <input name="answer" type="text" placeholder="Option 1|Option 2|Option 3"
+                                    class="form-control form-control-lg bg-light" required>
                                 <div class="form-text">Ví dụ: Có|Không|Ý kiến khác</div>
                             </div>
                             <div class="d-grid">
-                                <button type="submit" class="btn btn-success btn-lg shadow"><i class="fas fa-paper-plane"></i> Submit Survey</button>
+                                <button type="submit" class="btn btn-success btn-lg shadow"><i
+                                        class="fas fa-paper-plane"></i> Submit Survey</button>
                             </div>
                         </form>
                     </div>
@@ -164,7 +199,7 @@
     <!-- Blockchain Explorer -->
     <div class="tab-pane fade" id="explorer" role="tabpanel" aria-labelledby="explorer-tab">
         <h4 class="mb-4 text-dark border-bottom pb-2"><i class="fas fa-link"></i> Chuỗi khối (Blockchain Map)</h4>
-        
+
         {% if chain %}
         <div class="table-responsive">
             <table class="table table-hover shadow-sm bg-white align-middle">
@@ -185,38 +220,43 @@
                         <td class="font-monospace text-truncate" style="max-width: 250px;" title="{{ block.hash }}">
                             <span class="text-success">{{ block.hash }}</span>
                         </td>
-                        <td class="font-monospace text-truncate" style="max-width: 250px;" title="{{ block.previous_hash }}">
+                        <td class="font-monospace text-truncate" style="max-width: 250px;"
+                            title="{{ block.previous_hash }}">
                             <span class="text-muted">{{ block.previous_hash }}</span>
                         </td>
                         <td class="text-start" style="width: 350px;">
                             <details>
-                                <summary class="badge rounded-pill bg-info text-dark px-3 py-2 fw-bold" style="cursor: pointer; list-style-type: none;">
+                                <summary class="badge rounded-pill bg-info text-dark px-3 py-2 fw-bold"
+                                    style="cursor: pointer; list-style-type: none;">
                                     {{ block.transactions | length }} TXs <i class="fas fa-caret-down ms-1"></i>
                                 </summary>
-                                <div class="mt-2 text-start p-2 bg-light border rounded small shadow-sm position-absolute z-3" style="min-width: 300px; max-width: 400px; max-height: 250px; overflow-y: auto;">
+                                <div class="mt-2 text-start p-2 bg-light border rounded small shadow-sm position-absolute z-3"
+                                    style="min-width: 300px; max-width: 400px; max-height: 250px; overflow-y: auto;">
                                     {% if block.transactions %}
-                                        <ul class="list-unstyled mb-0 w-100">
+                                    <ul class="list-unstyled mb-0 w-100">
                                         {% for tx in block.transactions %}
-                                            <li class="border-bottom py-2">
-                                                <strong>Type:</strong> <span class="badge bg-secondary">{{ tx.type | upper }}</span><br>
-                                                <strong>Creator IP:</strong> <span class="text-muted">{{ tx.content.author }}</span><br>
-                                                <strong>Detail:</strong> 
-                                                {% if tx.type == 'vote' %}
-                                                    Bầu cho: <span class="text-primary fw-bold">{{ tx.content.vote }}</span> (Survey: {{ tx.content.questionid }})
-                                                {% elif tx.type == 'open' %}
-                                                    Mở Survey ID: <span class="text-success fw-bold">{{ tx.content.questionid }}</span>
-                                                {% elif tx.type == 'close' %}
-                                                    Đóng Survey ID: <span class="text-danger fw-bold">{{ tx.content.questionid }}</span>
-                                                {% elif tx.type == 'smartcontract' %}
-                                                    Cập nhật Chaincode
-                                                {% else %}
-                                                    {{ tx.content | string | truncate(50) }}
-                                                {% endif %}
-                                            </li>
+                                        <li class="border-bottom py-2">
+                                            <strong>Type:</strong> <span class="badge bg-secondary">{{ tx.type | upper }}</span><br>
+                                            <strong>Creator IP:</strong> <span class="text-muted">{{ tx.content.author }}</span><br>
+                                            <strong>Detail:</strong>
+                                            {% if tx.type == 'vote' %}
+                                            Bầu cho: <span class="text-primary fw-bold">{{ tx.content.vote }}</span>
+                                            (Survey: {{ tx.content.questionid }})
+                                            {% elif tx.type == 'open' %}
+                                            Mở Survey ID: <span class="text-success fw-bold">{{ tx.content.questionid }}</span>
+                                            {% elif tx.type == 'close' %}
+                                            Đóng Survey ID: <span class="text-danger fw-bold">{{ tx.content.questionid }}</span>
+                                            {% elif tx.type == 'smartcontract' %}
+                                            Cập nhật Chaincode
+                                            {% else %}
+                                            {{ tx.content | string | truncate(50) }}
+                                            {% endif %}
+                                        </li>
                                         {% endfor %}
-                                        </ul>
+                                    </ul>
                                     {% else %}
-                                        <span class="text-muted fst-italic">Khối rỗng (hoặc chỉ chứa giao dịch hệ thống)</span>
+                                    <span class="text-muted fst-italic">Khối rỗng (hoặc chỉ chứa giao dịch hệ
+                                        thống)</span>
                                     {% endif %}
                                 </div>
                             </details>
@@ -233,33 +273,110 @@
         </div>
         {% endif %}
 
-        <div class="mt-5 p-4 bg-light border rounded shadow-sm">
-            <h5 class="text-center text-primary mb-3"><i class="fas fa-project-diagram"></i> Sơ Đồ Quy Trình: Vòng đời của một giao dịch</h5>
-            <p class="text-center text-muted small mb-4">Từ khi khởi tạo giao dịch trên giao diện đến lúc được xác nhận và lưu trữ vĩnh viễn trên chuỗi khối.</p>
+        <div class="mt-5 p-4 bg-dark border rounded shadow-sm position-relative">
+            <h5 class="text-center text-info mb-3"><i class="fas fa-project-diagram"></i> Interactive Visual Chain Map
+            </h5>
+            <p class="text-center text-light small mb-4">Đồ thị minh họa các khối và liên kết Hash. Khối đầu tiên
+                (Genesis) màu đỏ. Bạn có thể kéo thả, phóng to và thu nhỏ đồ thị.</p>
             <div class="text-center">
-                <!-- Sẽ fallback sang placeholder nếu người dùng chưa đặt image_1.png vào thư mục static -->
-                <img src="/static/image_1.png" alt="Sơ đồ quy trình tạo và lưu trữ khối bỏ phiếu" class="img-fluid border rounded shadow" onerror="this.onerror=null; this.src='https://via.placeholder.com/800x300.png?text=Workflow+Diagram+(image_1.png)';">
+                <div id="visual_chain_map"
+                    style="width: 100%; height: 500px; background-color: #1a1a2e; border-radius: 8px; box-shadow: inset 0 0 15px #00e5ff;">
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script id="chain_data_json" type="application/json">
+    {{ chain | tojson | safe }}
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var chainData = JSON.parse(document.getElementById('chain_data_json').textContent);
+        if (!chainData || chainData.length === 0) return;
+
+        var nodesArray = [];
+        var edgesArray = [];
+
+        chainData.forEach(function (block) {
+            // Nhận diện block đầu tiên
+            var isGenesis = block.index === 0 || (block.index === 1 && block.previous_hash === "0");
+
+            var labelStr = "Block #" + block.index + "\n" +
+                "Hash: " + block.hash.substring(0, 10) + "...\n" +
+                "TXs: " + block.transactions.length;
+
+            nodesArray.push({
+                id: block.hash,
+                label: labelStr,
+                shape: isGenesis ? 'hexagon' : 'box',
+                color: {
+                    background: isGenesis ? '#ff3366' : '#0f3460',
+                    border: isGenesis ? '#ff99aa' : '#00e5ff',
+                    highlight: { background: '#e94560', border: '#fff' }
+                },
+                font: { color: '#ffffff', face: 'monospace' },
+                shadow: { enabled: true, color: '#00e5ff', size: 10, x: 0, y: 0 }
+            });
+
+            if (!isGenesis && block.previous_hash && block.previous_hash !== "0") {
+                edgesArray.push({
+                    from: block.hash,
+                    to: block.previous_hash,
+                    label: "Prev Hash",
+                    arrows: "to",
+                    color: { color: '#00e5ff', highlight: '#ffffff' },
+                    font: { color: '#00e5ff', size: 12, align: 'horizontal' },
+                    smooth: { type: 'cubicBezier' }
+                });
+            }
+        });
+
+        var container = document.getElementById('visual_chain_map');
+        var data = {
+            nodes: new vis.DataSet(nodesArray),
+            edges: new vis.DataSet(edgesArray)
+        };
+        var options = {
+            layout: {
+                hierarchical: {
+                    direction: 'RL', // Right to Left
+                    sortMethod: 'directed',
+                    levelSeparation: 250,
+                    nodeSpacing: 100
+                }
+            },
+            physics: false,
+            interaction: {
+                dragNodes: true,
+                dragView: true,
+                zoomView: true
+            }
+        };
+        var network = new vis.Network(container, data, options);
+    });
+</script>
+
 <style>
-/* Custom interaction styles */
-.transition-hover {
-    transition: all 0.2s ease-in-out;
-}
-.transition-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
-}
-.nav-pills .nav-link {
-    color: #495057;
-    border-radius: 0.5rem;
-}
-.nav-pills .nav-link.active {
-    background-color: #0d6efd;
-    color: white;
-}
+    /* Custom interaction styles */
+    .transition-hover {
+        transition: all 0.2s ease-in-out;
+    }
+
+    .transition-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+    }
+
+    .nav-pills .nav-link {
+        color: #495057;
+        border-radius: 0.5rem;
+    }
+
+    .nav-pills .nav-link.active {
+        background-color: #0d6efd;
+        color: white;
+    }
 </style>
 {% endblock %}
