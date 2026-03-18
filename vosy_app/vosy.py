@@ -1,5 +1,5 @@
 from flask import Flask
-from flask import render_template, redirect, request, jsonify
+from flask import render_template, redirect, request, jsonify, flash
 from math import *
 
 from utils import get_ip
@@ -13,6 +13,7 @@ import os
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
 app = Flask(__name__)
+app.secret_key = 'super_secret_voting_key'
 
 @app.context_processor
 def my_utility_processor():
@@ -57,9 +58,28 @@ def fetch_posts():
 @app.route('/')
 def index():
     fetch_posts()
+
+    # Fetch chain data for Blockchain Explorer
+    chain_address = "{}/chain".format(CONNECTED_NODE_ADDRESS)
+    response = requests.get(chain_address)
+    chain_data = []
+    if response.status_code == 200:
+        chain_data = json.loads(response.content).get('chain', [])
+        # reverse the chain to show latest blocks first
+        chain_data = chain_data[::-1]
+
+    # Fetch pending transactions
+    pending_tx_address = "{}/pending_tx".format(CONNECTED_NODE_ADDRESS)
+    response = requests.get(pending_tx_address)
+    pending_txs = []
+    if response.status_code == 200:
+        pending_txs = json.loads(response.content)
+
     return render_template('index.html',
-                           title='A Simple Blockchain based Voting System',
+                           title='Voting System Dashboard',
                            posts=posts,
+                           chain=chain_data,
+                           pending_txs=pending_txs,
                            node_address=CONNECTED_NODE_ADDRESS,
                            readable_time=timestamp_to_string)
 
@@ -67,10 +87,22 @@ def index():
 def mine():
     
     url = '{}/mine'.format(CONNECTED_NODE_ADDRESS)
-    response = requests.get(url)
-
-    data = response.json()['response']
-    return data
+    try:
+        response = requests.get(url)
+        if response.status_code == 200:
+            try:
+                data = response.json()['response']
+                flash(data, "success")
+            except requests.exceptions.JSONDecodeError:
+                flash(f"Lỗi phản hồi từ Node: Không thể phân tích chuỗi JSON. Raw: {response.text}", "danger")
+            except KeyError:
+                flash(f"Phản hồi từ Node thiếu thuộc tính 'response'. Raw: {response.text}", "danger")
+        else:
+            flash(f"Lỗi khi yêu cầu Node đào block. HTTP Status: {response.status_code}", "danger")
+    except requests.exceptions.RequestException as e:
+        flash(f"Không thể kết nối đến Node để đào block: {e}", "danger")
+        
+    return redirect('/')
 
 @app.route('/pending_tx', methods=['GET','POST'])
 def get_pending_tx():
@@ -102,7 +134,7 @@ def submit_textarea():
     author = get_ip(request.remote_addr)
     questionid = request.form["questionid"]
     question = request.form["question"]
-    answersList = request.form["answer"].split('|')
+    answersList = [a.strip() for a in request.form["answer"].split('|')]
     opening_time = int(request.form["opening_time"])*60
     answers = {}
 
@@ -143,6 +175,7 @@ def submit_textarea():
                   json=contract_object,
                   headers={'Content-type': 'application/json'})
 
+    flash("Giao dịch tạo cuộc bầu cử đang chờ xử lý (Pending in Mempool)", "warning")
     return redirect('/')
 
 @app.route('/close_survey', methods=['GET','POST'])
@@ -170,6 +203,7 @@ def close_survey():
                   json=post_object,
                   headers={'Content-type': 'application/json'})
 
+    flash("Giao dịch đóng cuộc bầu cử đang chờ xử lý (Pending in Mempool)", "warning")
     return redirect('/')
 
 @app.route('/vote', methods=['GET','POST'])
@@ -180,7 +214,7 @@ def vote():
 
     author = get_ip(request.remote_addr)
     questionid = request.args.get('id')
-    answer = request.args.get('answer')
+    answer = request.args.get('answer').strip()
 
     post_object = {
         'type' : 'vote',
@@ -199,6 +233,7 @@ def vote():
                   json=post_object,
                   headers={'Content-type': 'application/json'})
 
+    flash("Giao dịch bỏ phiếu đang chờ xử lý (Pending in Mempool)", "warning")
     return redirect('/')
 
 @app.route('/update_chaincode', methods=['GET','POST'])
@@ -227,6 +262,7 @@ def update_chaincode():
                   json=post_object,
                   headers={'Content-type': 'application/json'})
 
+    flash("Giao dịch cập nhật chaincode đang chờ xử lý (Pending in Mempool)", "warning")
     return redirect('/')
     
 

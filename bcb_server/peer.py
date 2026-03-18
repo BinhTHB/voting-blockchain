@@ -255,12 +255,24 @@ def validate_transaction(transaction):
     elif transaction['type'].lower() == 'vote':
         questionid = transaction['content']['questionid']
         if questionid in blockchain.open_surveys and blockchain.open_surveys[questionid]['status'] == 'opening':
-            vote = transaction['content']['vote']
+            vote = transaction['content']['vote'].strip()
             author = transaction['content']['author']
-            if author not in blockchain.open_surveys[questionid]['answers'][vote]:
-                blockchain.open_surveys[questionid]['answers'][vote].append(author)
-                return True
-            return False
+            
+            answers = blockchain.open_surveys[questionid]['answers']
+            
+            # Kiểm tra chống Double-Voting
+            already_voted = any(author in voters for voters in answers.values())
+            if already_voted:
+                print(f"Lỗi: IP {author} đã tham gia bỏ phiếu cho câu hỏi {questionid}.")
+                return False
+
+            if vote in answers:
+                if author not in answers[vote]:
+                    answers[vote].append(author)
+                    return True
+            else:
+                print(f"Lỗi: Phương án '{vote}' không tồn tại trong danh sách {list(answers.keys())}")
+                return False
     elif transaction['type'].lower() == 'smartcontract':
         try:
             exec(transaction['content']['code'],blockchain.chain_code,blockchain.chain_code)
@@ -303,11 +315,24 @@ def compute_open_surveys(block, open_surveys, chain_code):
         elif transaction['type'].lower() == 'vote':
             questionid = transaction['content']['questionid']
             if questionid in open_surveys and open_surveys[questionid]['status'] == 'opening':
-                vote = transaction['content']['vote']
+                vote = transaction['content']['vote'].strip()
                 author = transaction['content']['author']
-                if author not in open_surveys[questionid]['answers'][vote]:
-                    open_surveys[questionid]['answers'][vote].append(author)
-                    return True
+                
+                answers = open_surveys[questionid]['answers']
+                
+                # Kiểm tra chống Double-Voting
+                already_voted = any(author in voters for voters in answers.values())
+                if already_voted:
+                    print(f"Lỗi (Block): IP {author} đã tham gia bỏ phiếu cho câu hỏi {questionid}.")
+                    return False
+
+                if vote in answers:
+                    if author not in answers[vote]:
+                        answers[vote].append(author)
+                        return True
+                else:
+                    print(f"Lỗi: Phương án '{vote}' không tồn tại trong danh sách {list(answers.keys())}")
+                    return False
         elif transaction['type'].lower() == 'smartcontract':
             try:
                 exec(transaction['content']['code'],chain_code)
