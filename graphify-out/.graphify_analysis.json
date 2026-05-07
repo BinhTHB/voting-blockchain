@@ -1,0 +1,365 @@
+{
+  "communities": {
+    "0": [
+      "block",
+      "block_block",
+      "block_block_compute_hash",
+      "block_block_init",
+      "block_fromdict",
+      "block_rationale_20",
+      "blockchain",
+      "blockchain_blockchain",
+      "blockchain_blockchain_add_block",
+      "blockchain_blockchain_add_new_transaction",
+      "blockchain_blockchain_create_genesis_block",
+      "blockchain_blockchain_init",
+      "blockchain_blockchain_proof_of_work",
+      "blockchain_check_chain_validity",
+      "blockchain_fromlist",
+      "blockchain_is_valid_proof",
+      "blockchain_last_block",
+      "blockchain_rationale_31",
+      "blockchain_rationale_49",
+      "blockchain_rationale_69",
+      "blockchain_rationale_87",
+      "orderer",
+      "orderer_announce_new_block",
+      "orderer_announce_new_transaction",
+      "orderer_consensus",
+      "orderer_get_node",
+      "orderer_rationale_37",
+      "orderer_rationale_68",
+      "orderer_rationale_99",
+      "orderer_register_new_peers"
+    ],
+    "1": [
+      "bcb_server_certificate_authority_py",
+      "bcb_server_orderer_py",
+      "bcb_server_peer_py",
+      "doc_language_vi_VN",
+      "docs_bcb_vosy_pdf",
+      "peer_instance_4000",
+      "peer_instance_4001",
+      "peer_instance_5000",
+      "rationale_avoid_port_collision",
+      "rationale_interface_target_peer",
+      "requirements_flask",
+      "requirements_requests",
+      "requirements_txt",
+      "vosy_app_vosy_py",
+      "vosy_instance_8080",
+      "vosy_instance_8081",
+      "vosy_instance_8082"
+    ],
+    "2": [
+      "vosy",
+      "vosy_close_survey",
+      "vosy_fetch_posts",
+      "vosy_get_list_nodes",
+      "vosy_get_pending_tx",
+      "vosy_index",
+      "vosy_mine",
+      "vosy_my_utility_processor",
+      "vosy_rationale_131",
+      "vosy_rationale_184",
+      "vosy_rationale_212",
+      "vosy_rationale_43",
+      "vosy_submit_textarea",
+      "vosy_timestamp_to_string",
+      "vosy_update_chaincode",
+      "vosy_vote"
+    ],
+    "3": [
+      "peer",
+      "peer_compute_open_surveys",
+      "peer_get_chain",
+      "peer_get_local_chain",
+      "peer_get_open_surveys",
+      "peer_get_pending_tx",
+      "peer_get_transaction",
+      "peer_join_to_network",
+      "peer_list_node",
+      "peer_mine_unconfirmed_transactions",
+      "peer_new_transaction",
+      "peer_rationale_141",
+      "peer_validate_and_add_block",
+      "peer_validate_transaction"
+    ],
+    "4": [
+      "network_sample_orderer_bottom_left",
+      "network_sample_orderer_bottom_right",
+      "network_sample_orderer_top",
+      "network_sample_peer_bl_bottom",
+      "network_sample_peer_bl_center",
+      "network_sample_peer_bl_left",
+      "network_sample_peer_br_left",
+      "network_sample_peer_br_right",
+      "network_sample_peer_top_above",
+      "network_sample_peer_top_left",
+      "network_sample_peer_top_right"
+    ],
+    "5": [
+      "sample_avatar_user_icon",
+      "sample_card_delete_icon",
+      "sample_concept_blockchain",
+      "sample_post_author_127_0_0_1_5000",
+      "sample_post_new_survey_form",
+      "sample_submit_button",
+      "sample_survey_card_1",
+      "sample_survey_id_1"
+    ],
+    "6": [
+      "certificate_authority",
+      "certificate_authority_validate_connection",
+      "certificate_authority_validate_permission",
+      "utils",
+      "utils_get_ip"
+    ],
+    "7": [
+      "architecture_orderer_center",
+      "architecture_peer_center",
+      "architecture_peer_left",
+      "architecture_port_5000",
+      "architecture_port_5002"
+    ],
+    "8": [
+      "architecture_port_8080",
+      "architecture_vosy_center",
+      "architecture_vosy_left",
+      "architecture_vosy_right"
+    ],
+    "9": [
+      "chaincode",
+      "chaincode_count_down_opening_time"
+    ],
+    "10": [
+      "sample_server_url",
+      "sample_title"
+    ],
+    "11": [
+      "sample_action_mine",
+      "sample_button_mine"
+    ],
+    "12": [
+      "sample_action_update_chaincode",
+      "sample_button_update_chaincode"
+    ],
+    "13": [
+      "sample_action_resync",
+      "sample_button_resync"
+    ],
+    "14": [
+      "sample_action_pending_transactions",
+      "sample_button_pending_transaction"
+    ],
+    "15": [
+      "sample_action_list_nodes",
+      "sample_button_list_node"
+    ],
+    "16": [
+      "architecture_ca_center",
+      "architecture_port_5001"
+    ],
+    "17": [
+      "sample_brand_bcb_vosy"
+    ],
+    "18": [
+      "sample_field_question_id"
+    ],
+    "19": [
+      "sample_field_survey"
+    ],
+    "20": [
+      "sample_field_answer"
+    ],
+    "21": [
+      "sample_field_opening_time"
+    ],
+    "22": [
+      "sample_open_surveys_section"
+    ],
+    "23": [
+      "architecture_machine_left"
+    ],
+    "24": [
+      "architecture_machine_center"
+    ],
+    "25": [
+      "architecture_machine_right"
+    ]
+  },
+  "cohesion": {
+    "0": 0.11,
+    "1": 0.2,
+    "2": 0.13,
+    "3": 0.19,
+    "4": 0.18,
+    "5": 0.25,
+    "6": 0.4,
+    "7": 0.5,
+    "8": 0.83,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0
+  },
+  "gods": [
+    {
+      "id": "block_block",
+      "label": "Block",
+      "edges": 13
+    },
+    {
+      "id": "blockchain_blockchain",
+      "label": "Blockchain",
+      "edges": 12
+    },
+    {
+      "id": "vosy_app_vosy_py",
+      "label": "VOSY Web Interface (vosy_app/vosy.py)",
+      "edges": 5
+    },
+    {
+      "id": "peer_instance_4000",
+      "label": "Peer2 instance (127.0.0.1:4000)",
+      "edges": 5
+    },
+    {
+      "id": "peer_instance_4001",
+      "label": "Peer3 instance (127.0.0.1:4001)",
+      "edges": 5
+    },
+    {
+      "id": "network_sample_orderer_bottom_left",
+      "label": "Orderer (bottom_left)",
+      "edges": 5
+    },
+    {
+      "id": "sample_survey_card_1",
+      "label": "Survey post card: \"127.0.0.1:5000 made a post with id 1.\"",
+      "edges": 5
+    },
+    {
+      "id": "peer_compute_open_surveys",
+      "label": "compute_open_surveys()",
+      "edges": 4
+    },
+    {
+      "id": "bcb_server_peer_py",
+      "label": "Peer (bcb_server/peer.py)",
+      "edges": 4
+    },
+    {
+      "id": "peer_instance_5000",
+      "label": "Peer1 instance (127.0.0.1:5000)",
+      "edges": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "VOSY Web Interface (vosy_app/vosy.py)",
+      "target": "Flask",
+      "source_files": [
+        "vosy_app/vosy.py",
+        "requirements.txt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 code); connects across different repos/directories; peripheral node `Flask` unexpectedly reaches hub `VOSY Web Interface (vosy_app/vosy.py)`"
+    },
+    {
+      "source": "Peer (bcb_server/peer.py)",
+      "target": "Requests",
+      "source_files": [
+        "bcb_server/peer.py",
+        "requirements.txt"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 code); connects across different repos/directories"
+    },
+    {
+      "source": "VOSY Interface 1 (127.0.0.1:8080 -> Peer 5000)",
+      "target": "VOSY Web Interface (vosy_app/vosy.py)",
+      "source_files": [
+        "README.md",
+        "vosy_app/vosy.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "crosses file types (code \u2194 doc); connects across different repos/directories; peripheral node `VOSY Interface 1 (127.0.0.1:8080 -> Peer 5000)` unexpectedly reaches hub `VOSY Web Interface (vosy_app/vosy.py)`"
+    },
+    {
+      "source": "Peer1 instance (127.0.0.1:5000)",
+      "target": "Orderer (bcb_server/orderer.py)",
+      "source_files": [
+        "README.md",
+        "bcb_server/orderer.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "shares_data_with",
+      "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
+    },
+    {
+      "source": "Peer2 instance (127.0.0.1:4000)",
+      "target": "Orderer (bcb_server/orderer.py)",
+      "source_files": [
+        "README.md",
+        "bcb_server/orderer.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "shares_data_with",
+      "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "ambiguous_edge",
+      "question": "What is the exact relationship between `VOSY Web Interface (vosy_app/vosy.py)` and `bcb_vosy.pdf`?",
+      "why": "Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low."
+    },
+    {
+      "type": "ambiguous_edge",
+      "question": "What is the exact relationship between `Survey post card: \"127.0.0.1:5000 made a post with id 1.\"` and `Red circular X (delete/close icon) on card`?",
+      "why": "Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Block` connect `Community 0` to `Community 3`?",
+      "why": "High betweenness centrality (0.051) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `Blockchain` connect `Community 0` to `Community 3`?",
+      "why": "High betweenness centrality (0.039) - this node is a cross-community bridge."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 9 inferred relationships involving `Block` (e.g. with `A function to announce to the network once a block has been mined.     Other blo` and `A function to announce to the network once a transaction has been added.     Oth`) actually correct?",
+      "why": "`Block` has 9 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "verify_inferred",
+      "question": "Are the 5 inferred relationships involving `Blockchain` (e.g. with `A function to announce to the network once a block has been mined.     Other blo` and `A function to announce to the network once a transaction has been added.     Oth`) actually correct?",
+      "why": "`Blockchain` has 5 INFERRED edges - model-reasoned connections that need verification."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `Function to fetch the chain from a blockchain node, parse the     data and store`, `Endpoint to create a new transaction via our application.`, `Endpoint to create a new transaction via our application.` to the rest of the system?",
+      "why": "45 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

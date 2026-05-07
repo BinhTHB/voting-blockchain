@@ -1,0 +1,1535 @@
+{
+  "nodes": [
+    {
+      "id": "requirements_txt",
+      "label": "requirements.txt",
+      "file_type": "document",
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_flask",
+      "label": "Flask",
+      "file_type": "document",
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "requirements_requests",
+      "label": "Requests",
+      "file_type": "document",
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bcb_server_orderer_py",
+      "label": "Orderer (bcb_server/orderer.py)",
+      "file_type": "code",
+      "source_file": "bcb_server/orderer.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bcb_server_certificate_authority_py",
+      "label": "Certificate Authority (bcb_server/certificate_authority.py)",
+      "file_type": "code",
+      "source_file": "bcb_server/certificate_authority.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "bcb_server_peer_py",
+      "label": "Peer (bcb_server/peer.py)",
+      "file_type": "code",
+      "source_file": "bcb_server/peer.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vosy_app_vosy_py",
+      "label": "VOSY Web Interface (vosy_app/vosy.py)",
+      "file_type": "code",
+      "source_file": "vosy_app/vosy.py",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "peer_instance_5000",
+      "label": "Peer1 instance (127.0.0.1:5000)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vosy_instance_8080",
+      "label": "VOSY Interface 1 (127.0.0.1:8080 -> Peer 5000)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "peer_instance_4000",
+      "label": "Peer2 instance (127.0.0.1:4000)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vosy_instance_8081",
+      "label": "VOSY Interface 2 (127.0.0.1:8081 -> Peer 4000)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "peer_instance_4001",
+      "label": "Peer3 instance (127.0.0.1:4001)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "vosy_instance_8082",
+      "label": "VOSY Interface 3 (127.0.0.1:8082 -> Peer 4001)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "rationale_avoid_port_collision",
+      "label": "Avoid port collisions (use distinct ports)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "rationale_interface_target_peer",
+      "label": "Interface should connect only to specified peer",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "docs_bcb_vosy_pdf",
+      "label": "bcb_vosy.pdf",
+      "file_type": "paper",
+      "source_file": "docs/bcb_vosy.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "doc_language_vi_VN",
+      "label": "Document language: vi-VN (Vietnamese)",
+      "file_type": "document",
+      "source_file": "docs/bcb_vosy.pdf",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_orderer_top",
+      "label": "Orderer (top)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_orderer_bottom_left",
+      "label": "Orderer (bottom_left)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_orderer_bottom_right",
+      "label": "Orderer (bottom_right)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_peer_top_above",
+      "label": "Peer (above top orderer)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_peer_top_left",
+      "label": "Peer (left of top orderer)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_peer_top_right",
+      "label": "Peer (right of top orderer)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_peer_bl_left",
+      "label": "Peer (left of bottom-left orderer)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_peer_bl_bottom",
+      "label": "Peer (bottom of bottom-left orderer)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_peer_bl_center",
+      "label": "Peer (bottom-center near bottom-left orderer)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_peer_br_left",
+      "label": "Peer (left of bottom-right orderer)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "network_sample_peer_br_right",
+      "label": "Peer (right of bottom-right orderer)",
+      "file_type": "image",
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_title",
+      "label": "A Simple Blockchain based Voting System",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_brand_bcb_vosy",
+      "label": "BCB_VOSY (brand/home link)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_server_url",
+      "label": "0.0.0.0:8080 (address bar)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_button_mine",
+      "label": "Mine (button)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_button_resync",
+      "label": "Resync (button)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_button_update_chaincode",
+      "label": "Update Chaincode (button)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_button_pending_transaction",
+      "label": "Pending Transaction (button)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_button_list_node",
+      "label": "List Node (button)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_action_mine",
+      "label": "Mine (action: block creation/mining)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_action_resync",
+      "label": "Resync (action: network/state resync)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_action_update_chaincode",
+      "label": "Update Chaincode (action)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_action_pending_transactions",
+      "label": "View Pending Transactions (action)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_action_list_nodes",
+      "label": "List Nodes (action)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_post_new_survey_form",
+      "label": "Post New Survey (form)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_field_question_id",
+      "label": "Question ID field",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_field_survey",
+      "label": "Survey textarea field",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_field_answer",
+      "label": "Answer field",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_field_opening_time",
+      "label": "Opening Time (minute) field",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_submit_button",
+      "label": "Submit (form button)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_open_surveys_section",
+      "label": "Open Surveys (section)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_survey_card_1",
+      "label": "Survey post card: \"127.0.0.1:5000 made a post with id 1.\"",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_post_author_127_0_0_1_5000",
+      "label": "127.0.0.1:5000 (post author/source)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_survey_id_1",
+      "label": "Survey id 1",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_avatar_user_icon",
+      "label": "User avatar (illustration) on card",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_card_delete_icon",
+      "label": "Red circular X (delete/close icon) on card",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "sample_concept_blockchain",
+      "label": "Blockchain (system concept)",
+      "file_type": "image",
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_machine_left",
+      "label": "Machine (left)",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_vosy_left",
+      "label": "Vosy (left) Port: 8080",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_peer_left",
+      "label": "Peer (left) Port: 5000",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_machine_center",
+      "label": "Machine (center)",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_vosy_center",
+      "label": "Vosy (center) Port: 8080",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_peer_center",
+      "label": "Peer (center) Port: 5000",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_ca_center",
+      "label": "Certificate Authority (CA) (center) Port: 5001",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_orderer_center",
+      "label": "Orderer (center) Port: 5002",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_machine_right",
+      "label": "Machine (right)",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_vosy_right",
+      "label": "Vosy (right) Port: 8080",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_port_8080",
+      "label": "Port 8080",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_port_5000",
+      "label": "Port 5000",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_port_5001",
+      "label": "Port 5001",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "architecture_port_5002",
+      "label": "Port 5002",
+      "file_type": "image",
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "requirements_txt",
+      "target": "requirements_flask",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "requirements_txt",
+      "target": "requirements_requests",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "vosy_instance_8080",
+      "target": "peer_instance_5000",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "vosy_instance_8081",
+      "target": "peer_instance_4000",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "vosy_instance_8082",
+      "target": "peer_instance_4001",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "peer_instance_5000",
+      "target": "bcb_server_peer_py",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "peer_instance_4000",
+      "target": "bcb_server_peer_py",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "peer_instance_4001",
+      "target": "bcb_server_peer_py",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "vosy_instance_8080",
+      "target": "vosy_app_vosy_py",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "vosy_instance_8081",
+      "target": "vosy_app_vosy_py",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "vosy_instance_8082",
+      "target": "vosy_app_vosy_py",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "peer_instance_5000",
+      "target": "bcb_server_orderer_py",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "peer_instance_5000",
+      "target": "bcb_server_certificate_authority_py",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "peer_instance_4000",
+      "target": "bcb_server_orderer_py",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "peer_instance_4000",
+      "target": "bcb_server_certificate_authority_py",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "peer_instance_4001",
+      "target": "bcb_server_orderer_py",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "peer_instance_4001",
+      "target": "bcb_server_certificate_authority_py",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "rationale_avoid_port_collision",
+      "target": "peer_instance_4000",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "rationale_avoid_port_collision",
+      "target": "peer_instance_4001",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "rationale_avoid_port_collision",
+      "target": "vosy_instance_8081",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "rationale_avoid_port_collision",
+      "target": "vosy_instance_8082",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "rationale_interface_target_peer",
+      "target": "vosy_instance_8081",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "rationale_interface_target_peer",
+      "target": "vosy_instance_8082",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "vosy_app_vosy_py",
+      "target": "requirements_flask",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "bcb_server_peer_py",
+      "target": "requirements_requests",
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "requirements.txt",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "docs_bcb_vosy_pdf",
+      "target": "doc_language_vi_VN",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "docs/bcb_vosy.pdf",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "docs_bcb_vosy_pdf",
+      "target": "vosy_app_vosy_py",
+      "relation": "conceptually_related_to",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.2,
+      "source_file": "docs/bcb_vosy.pdf",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "network_sample_peer_top_above",
+      "target": "network_sample_orderer_top",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "network_sample_peer_top_left",
+      "target": "network_sample_orderer_top",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "network_sample_peer_top_right",
+      "target": "network_sample_orderer_top",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "network_sample_peer_bl_left",
+      "target": "network_sample_orderer_bottom_left",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "network_sample_peer_bl_bottom",
+      "target": "network_sample_orderer_bottom_left",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "network_sample_peer_bl_center",
+      "target": "network_sample_orderer_bottom_left",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "network_sample_peer_br_left",
+      "target": "network_sample_orderer_bottom_right",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "network_sample_peer_br_right",
+      "target": "network_sample_orderer_bottom_right",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "network_sample_orderer_top",
+      "target": "network_sample_orderer_bottom_left",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "network_sample_orderer_bottom_left",
+      "target": "network_sample_orderer_bottom_right",
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "sample_survey_card_1",
+      "target": "sample_post_author_127_0_0_1_5000",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_survey_card_1",
+      "target": "sample_survey_id_1",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_server_url",
+      "target": "sample_title",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_submit_button",
+      "target": "sample_post_new_survey_form",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_button_mine",
+      "target": "sample_action_mine",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_button_resync",
+      "target": "sample_action_resync",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_button_update_chaincode",
+      "target": "sample_action_update_chaincode",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_button_pending_transaction",
+      "target": "sample_action_pending_transactions",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_button_list_node",
+      "target": "sample_action_list_nodes",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_post_new_survey_form",
+      "target": "sample_survey_card_1",
+      "relation": "calls",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_post_new_survey_form",
+      "target": "sample_concept_blockchain",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_survey_card_1",
+      "target": "sample_post_new_survey_form",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_survey_card_1",
+      "target": "sample_avatar_user_icon",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "sample_card_delete_icon",
+      "target": "sample_survey_card_1",
+      "relation": "conceptually_related_to",
+      "confidence": "AMBIGUOUS",
+      "confidence_score": 0.2,
+      "source_file": "docs/sample.png",
+      "source_location": null,
+      "weight": 1
+    },
+    {
+      "source": "architecture_vosy_left",
+      "target": "architecture_port_8080",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_vosy_center",
+      "target": "architecture_port_8080",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_vosy_right",
+      "target": "architecture_port_8080",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_peer_left",
+      "target": "architecture_port_5000",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_peer_center",
+      "target": "architecture_port_5000",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_ca_center",
+      "target": "architecture_port_5001",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_orderer_center",
+      "target": "architecture_port_5002",
+      "relation": "conceptually_related_to",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_vosy_left",
+      "target": "architecture_vosy_center",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_vosy_center",
+      "target": "architecture_vosy_right",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_peer_left",
+      "target": "architecture_peer_center",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "architecture_peer_center",
+      "target": "architecture_orderer_center",
+      "relation": "shares_data_with",
+      "confidence": "INFERRED",
+      "confidence_score": 0.7,
+      "source_file": "docs/architecture.png",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "cluster1_main",
+      "label": "Cluster 1 (main node & infrastructure)",
+      "nodes": [
+        "bcb_server_orderer_py",
+        "bcb_server_certificate_authority_py",
+        "peer_instance_5000",
+        "vosy_instance_8080"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md"
+    },
+    {
+      "id": "cluster2_nodes",
+      "label": "Cluster 2 (peer 2 & interface 2)",
+      "nodes": [
+        "peer_instance_4000",
+        "vosy_instance_8081"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md"
+    },
+    {
+      "id": "cluster3_nodes",
+      "label": "Cluster 3 (peer 3 & interface 3)",
+      "nodes": [
+        "peer_instance_4001",
+        "vosy_instance_8082"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "README.md"
+    },
+    {
+      "id": "network_sample_orderer_cluster",
+      "label": "Orderer cluster",
+      "nodes": [
+        "network_sample_orderer_top",
+        "network_sample_orderer_bottom_left",
+        "network_sample_orderer_bottom_right"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/network_sample.png"
+    },
+    {
+      "id": "network_sample_top_participants",
+      "label": "Top orderer and peers",
+      "nodes": [
+        "network_sample_orderer_top",
+        "network_sample_peer_top_above",
+        "network_sample_peer_top_left",
+        "network_sample_peer_top_right"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png"
+    },
+    {
+      "id": "network_sample_bl_participants",
+      "label": "Bottom-left orderer and peers",
+      "nodes": [
+        "network_sample_orderer_bottom_left",
+        "network_sample_peer_bl_left",
+        "network_sample_peer_bl_bottom",
+        "network_sample_peer_bl_center"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png"
+    },
+    {
+      "id": "network_sample_br_participants",
+      "label": "Bottom-right orderer and peers",
+      "nodes": [
+        "network_sample_orderer_bottom_right",
+        "network_sample_peer_br_left",
+        "network_sample_peer_br_right"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/network_sample.png"
+    },
+    {
+      "id": "sample_form_fields",
+      "label": "Post New Survey form fields",
+      "nodes": [
+        "sample_post_new_survey_form",
+        "sample_field_question_id",
+        "sample_field_survey",
+        "sample_field_answer",
+        "sample_field_opening_time",
+        "sample_submit_button"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "docs/sample.png"
+    },
+    {
+      "id": "sample_open_surveys_contains_cards",
+      "label": "Open Surveys contains survey cards",
+      "nodes": [
+        "sample_open_surveys_section",
+        "sample_survey_card_1"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1,
+      "source_file": "docs/sample.png"
+    },
+    {
+      "id": "machine_left_composition",
+      "label": "Machine (left) composition",
+      "nodes": [
+        "architecture_vosy_left",
+        "architecture_peer_left"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png"
+    },
+    {
+      "id": "machine_center_composition",
+      "label": "Machine (center) composition",
+      "nodes": [
+        "architecture_vosy_center",
+        "architecture_peer_center",
+        "architecture_ca_center",
+        "architecture_orderer_center"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png"
+    },
+    {
+      "id": "machine_right_composition",
+      "label": "Machine (right) composition",
+      "nodes": [
+        "architecture_vosy_right"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/architecture.png"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}
